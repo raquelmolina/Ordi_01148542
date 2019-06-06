@@ -26,6 +26,9 @@ public class AnimalesConverter {
     @Qualifier("tipoAnimalRepository")
     private TipoAnimalRepository tipoAnimalRepository;
 
+    @Autowired
+    @Qualifier("imagenesRepository")
+    private ImagenesRepository imagenesRepository;
 
     public Animales convertirAnimalesModelaAnimales(AnimalesModel animalesModel) throws Exception {
         Animales animales = new Animales();
@@ -41,6 +44,9 @@ public class AnimalesConverter {
         animales.setIdRazaAnimal(tipoRaza);
         TipoAnimal tipoAnimal = tipoAnimalRepository.findByIdTipoAnimal(animalesModel.getIdtipoAnimal());
         animales.setIdtipoAnimal(tipoAnimal);
+        Imagenes imagenes = imagenesRepository.findByIdImagen(animalesModel.getIdImagen());
+        animales.setIdImagen(imagenes);
+
         return animales;
     }
 
@@ -52,6 +58,7 @@ public class AnimalesConverter {
         animalesModel.setFechaAdop(animales.getFechaAdop().toString());
         animalesModel.setIdRazaAnimal(animales.getIdRazaAnimal().getIdRazaAnimal());
         animalesModel.setIdtipoAnimal(animales.getIdtipoAnimal().getIdTipoAnimal());
+        animalesModel.setIdImagen(animales.getIdImagen().getIdImagen());
         return animalesModel;
     }
 

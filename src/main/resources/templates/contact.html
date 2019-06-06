@@ -91,10 +91,10 @@
     <li><a href="/animales/index">Ver Mascotas</a></li>
     <li><a href="/index">Inicio</a></li>
   </ul>
-  <div class="row">
-    <div class="col-sm-9" id="content">
-      <div class="row">
-        <div class="col-md-10">
+  <div>
+    <div  id="content">
+      <div>
+        <div>
           <div style="text-align: center;">
             <h1>Consulta de Mascotas</h1>
 
@@ -109,6 +109,7 @@
                 <th>Fecha Adopción</th>
                 <th>Tipo de Mascota</th>
                 <th>Raza</th>
+                <th>Imagen</th>
 
               </tr>
               </thead>
@@ -120,7 +121,7 @@
                   <td th:text="${animal.FechaAdop}"></td>
                   <td th:switch="${animal.idtipoAnimal}">
                     <label th:case="'0'">
-                      Reptiles
+                      Doméstico
                     </label>
                     <label th:case="'1'">
                       Peces
@@ -138,6 +139,17 @@
                     </label>
                     <label th:case="'2'">
                       Chihuahua
+                    </label>
+                  </td>
+                  <td th:switch="${animal.idImagen}">
+                    <label th:case="'0'">
+                      <img src="https://http2.mlstatic.com/hermosos-cachorros-pug-D_NQ_NP_713242-MLM28153050117_092018-Q.jpg">
+                    </label>
+                    <label th:case="'1'">
+                      <img src="https://cdn6.aptoide.com/imgs/e/4/7/e47f37d62cd119d3fa6dddfad1d0f392_icon.png?w=256">
+                    </label>
+                    <label th:case="'2'">
+                      <img src="http://www.peceswiki.com/Imagenes/pez-payaso.jpg">
                     </label>
                   </td>
                   <td>

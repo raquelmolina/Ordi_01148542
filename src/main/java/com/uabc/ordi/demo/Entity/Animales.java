@@ -26,7 +26,7 @@ public class Animales {
     @JoinColumn(name="id_razaAnimal")
     private TipoRaza idRazaAnimal;
     @OneToOne
-    @JoinColumn(name="id_imagen")
+    @JoinColumn(name="url")
     private Imagenes idImagen;
 
 

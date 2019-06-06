@@ -720,7 +720,7 @@ pre code {
 }
 @media (max-width:979px) {
     .container {
-        width: 724px;
+        width: 900px;
 		padding: 0;
     }
 }
