@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+<title>Control de Laboratorio</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-commerce site well design with responsive view." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700}" rel="stylesheet">
+    <link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+    <link th:href="@{/css/responsive.css}" rel="stylesheet">
+    <link th:href="@{/owl-carousel/owl.carousel.css}" type="text/css" rel="stylesheet" media="screen" />
+    <link th:href="@{/owl-carousel/owl.transitions.css}" type="text/css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" th:href="@{/bootstrap/css/glyphicons.css}" type="text/css">
+    <script th:src="@{/javascript/jquery-2.1.1.min.js}" type="text/javascript"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}" type="text/javascript}"></script>
+    <script type="text/javascript" th:src="@{/javascript/jstree.min.js}"></script>
+    <script type="text/javascript" th:src="@{/javascript/template.js}"></script>
+    <script th:src="@{/javascript/common.js}" type="text/javascript"></script>
+    <script th:src="@{/javascript/global.js}" type="text/javascript"></script>
+    <script th:src="@{/owl-carousel/owl.carousel.min.js}" type="text/javascript"></script>
+
+</head>
+<body class="account-register col-2">
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img th:src="@{/image/loader.gif}" alt="#"/></div>
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-left pull-left">
+            <div class="language">
+              <form action="#" method="post" enctype="multipart/form-data" id="language">
+                <div class="btn-group">
+                  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img th:src="@{/image/flags/gb.png}" alt="English" title="English">English <i class="fa fa-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><img th:src="@{/image/flags/lb.png}" alt="Arabic" title="Arabic"> Arabic</a></li>
+                    <li><a href="#"><img th:src="@{/image/flags/gb.png}" alt="English" title="English"> English</a></li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <div class="currency">
+              <form action="#" method="post" enctype="multipart/form-data" id="currency">
+                <div class="btn-group">
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="top-right pull-right">
+            <div id="top-links" class="nav pull-right">
+
+                </li>
+
+              </ul>
+              <div class="search-box">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-inner">
+
+
+      <div class="col-sm-4 col-xs-12 header-right">
+        <div id="cart" class="btn-group btn-block">
+
+          <ul class="dropdown-menu pull-right cart-dropdown-menu">
+            <li>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>
+              <div>
+                <table class="table table-bordered">
+                  <tbody>
+
+                  </tbody>
+                </table>
+                 </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav id="menu" class="navbar">
+      <div class="nav-inner">
+         </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="/index"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Mi Cuenta</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+    <div class="row">
+        <div class="col-sm-3 hidden-xs column-left" id="column-left">
+            <div class="column-block">
+
+                <div class="account-block">
+                     </div>
+            </div>
+        </div>
+        <div class="col-sm-9" id="content">
+            <h1>Registro Mascota</h1>
+            <form class="form-horizontal" enctype="multipart/form-data" action="#" th:action="@{/animales/addAnimales}" th:object="${animalesModel}" method="post">
+
+
+            <fieldset id="account">
+                    <legend>Datos de la Mascota</legend>
+                <div class="form-group required">
+                    <label  class="col-sm-2 control-label">ID de la Mascota </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Nombre"  name="firstname" th:field="*{idAnimal}" th:value="${idAnimal}"></input>
+                    </div>
+
+                    <div class="form-group required">
+                        <label  class="col-sm-2 control-label">Nombre(s) </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Nombre"  name="firstname" th:field="*{nombre}" th:value="${nombre}"></input>
+                    </div>
+                    </div>
+                    <div class="form-group required">
+                        <label  class="col-sm-2 control-label">Fecha de Nacimiento</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" th:field="*{fechaNac}" th:value="${fechaNac}"></input>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label  class="col-sm-2 control-label">Fecha de Adopción</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" th:field="*{fechaAdop}" th:value="${fechaAdop}"></input>
+                        </div>
+                    </div>
+                    <br><br>
+                </fieldset>
+                <fieldset id="address">
+                    <div class="form-group required">
+                        <label for="input-country" class="col-sm-2 control-label">Tipo De Raza</label>
+                        <div class="col-sm-10">
+                            <select th:field="*{idRazaAnimal}" class="form-control"  id="input-country" name="country_id">
+                                <option th:value="'0'">Perro</option>
+                                <option th:value="'1'">Gato</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br><br>
+                </fieldset>
+
+                <div class="buttons">
+                    <div class="pull-right"><a class="agree" href="#"><b></b></a>
+                        &nbsp;
+                        <input type="submit" class="btn btn-primary" value="Continue">
+                    </div>
+
+                    <div class="pull-right"><a class="salir" href="login.html"><b></b></a>
+                        <a class="btn btn-primary" th:href="@{/index}">Cancelar</a>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+  <div class="container">
+
+    <div class="row">
+
+    </div>    
+  </div>
+  <a id="scrollup">Scroll</a> </footer>
+<div class="footer-bottom">
+  <div class="container">
+    <div class="copyright"> &nbsp;<a class="yourstore" th:href="@{http://www.lionode.com/}"> </a> </div>
+
+  </div>
+</div></body>
+</html>

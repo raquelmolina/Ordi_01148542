@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+<title>Administrador</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-commerce site well design with responsive view." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+  <link th:href="@{/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css" />
+  <link th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700}" rel="stylesheet">
+  <link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+  <link th:href="@{/css/responsive.css}" rel="stylesheet">
+  <link th:href="@{/owl-carousel/owl.carousel.css}" type="text/css" rel="stylesheet" media="screen" />
+  <link th:href="@{/owl-carousel/owl.transitions.css}" type="text/css" rel="stylesheet" media="screen" />
+  <link rel="stylesheet" th:href="@{/bootstrap/css/glyphicons.css}" type="text/css">
+  <script th:src="@{/javascript/jquery-2.1.1.min.js}" type="text/javascript"></script>
+  <script th:src="@{/bootstrap/js/bootstrap.min.js}" type="text/javascript}"></script>
+  <script type="text/javascript" th:src="@{/javascript/jstree.min.js}"></script>
+  <script type="text/javascript" th:src="@{/javascript/template.js}"></script>
+  <script th:src="@{/javascript/common.js}" type="text/javascript"></script>
+  <script th:src="@{/javascript/global.js}" type="text/javascript"></script>
+  <script th:src="@{/owl-carousel/owl.carousel.min.js}" type="text/javascript"></script>
+
+
+
+</head>
+<body class="account-login col-2">
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img th:src="@{/image/loader.gif}"  alt="#"/></div>
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-left pull-left">
+            <div class="currency">
+              <form action="#" method="post" enctype="multipart/form-data" id="currency">
+                <div class="btn-group">
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="top-right pull-right">
+            <div id="top-links" class="nav pull-right">
+              <ul class="list-inline">
+                <li class="dropdown account"><a href="/index" title="My Account" class="  dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i><span>Mi Cuenta</span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="login.html">Cerrar Sesion</a></li>
+                  </ul>
+                </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="col-sm-4 col-xs-6 header-left">
+        <div class="shipping">
+
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-middle">
+        <div class="header-middle-top">
+          <div id="logo"> <img th:src="@{/image/logo.png}" title="E-Commerce" alt="E-Commerce" class="img-responsive" /> </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-right">
+
+      </div>
+    </div>
+    <nav id="menu" class="navbar">
+      <div class="nav-inner">
+
+        <div class="navbar-collapse">
+          <ul class="main-navigation">
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <ul class="breadcrumb">
+    <li><a href="/index"><i class="fa fa-home"></i></a></li>
+    <li><a href="#">Mi Cuenta </a></li>
+    <li><a href="login.html">Administrador</a></li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-9" id="content">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well">
+            <h2>Registrar</h2>
+            <p><strong>Registrar nuevo Animal</strong></p>
+            <a class="btn btn-primary" th:href="@{/animales/form?idAnimal=none}">Continuar</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+</div>
+
+</body>
+</html>
